@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scrollbar-width: thin;
+  }
+
+  body {
+    color: oklch(21% 0.034 264.665);
+  }
+
+  a,
+  button {
+    cursor: pointer;
+  }
+
+  button:disabled,
+  a[aria-disabled="true"] {
+    cursor: not-allowed;
+    opacity: 0.5;
+    color: oklch(70.7% 0.022 261.325);
+  }
+}
+
+@utility flex-between-center {
+  @apply flex justify-between items-center;
+}
+
+@utility flex-center {
+  @apply flex justify-center items-center;
+}
+
+@utility label-base {
+  @apply flex items-center gap-2 uppercase tracking-wider;
+}
+
+@utility section-label {
+  @apply label-base text-xs font-semibold text-gray-500;
+}
+
+@utility sub-label {
+  @apply label-base text-[10px] font-medium text-gray-400 mb-1;
+}
